@@ -1,8 +1,6 @@
 package database
 
 import (
-	"fmt"
-
 	"TodoGolang/models"
 
 	"log"
@@ -17,15 +15,16 @@ var DB *gorm.DB
 // SetupDB : initializing mysql database
 func Setup() {
 
-	USER := "root"
+	/*USER := "root"
 	PASS := "Enam:@7137"
 	HOST := "localhost"
 	PORT := "3306"
-	DBNAME := "todo"
+	DBNAME := "todo"*/
 
-	URL := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", USER, PASS, HOST, PORT, DBNAME)
+	//URL := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", USER, PASS, HOST, PORT, DBNAME)
+	//db, err := gorm.Open("mysql", URL)
 
-	db, err := gorm.Open("mysql", URL)
+	db, err := gorm.Open("mysql", "root:Enam:@7137@tcp(docker.for.mac.localhost:3306)/todo?parseTime=true")
 
 	if err != nil {
 		log.Fatal(err)

@@ -13,3 +13,6 @@ func main() {
 		log.Fatal(err)
 	}
 }
+
+//test connection refused
+//https://stackoverflow.com/questions/58222386/github-actions-using-mysql-service-throws-access-denied-for-user-rootlocalh
