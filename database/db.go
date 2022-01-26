@@ -48,3 +48,8 @@ func Setup() {
 func GetDB() *gorm.DB {
 	return DB
 }
+
+func ClearTable() {
+	DB.Exec("DELETE FROM users")
+	DB.Exec("ALTER SEQUENCE users_id_seq RESTART WITH 1")
+}
